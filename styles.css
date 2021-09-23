@@ -49,7 +49,7 @@ li {
   padding: 0;
 }
 
-.country {
+.city {
   line-height: 20px;
 }
 
@@ -60,6 +60,7 @@ li {
 
 .description {
   line-height: 20px;
+  text-transform: capitalize;
 }
 
 i {
