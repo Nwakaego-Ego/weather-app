@@ -38,7 +38,13 @@ function displayTemperature(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  //
+  let iconElement = document.querySelector("#icon");
+  // iconElement.classList.remove("fas");
+  // iconElement.classList.add(`https://openweathermap.org/img/wn/10d@2x.png`);
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function search(city) {
   let apiKey = "49d8a1330406cb9ac92bd472b6ff3770";

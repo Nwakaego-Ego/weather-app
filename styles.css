@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 body {
   padding: 30px;
   background-color: #202124;
@@ -63,8 +67,18 @@ li {
   text-transform: capitalize;
 }
 
-i {
+img {
   font-size: 60px;
+  position: relative;
+  top: -10px;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: content-box;
 }
 
 .temperature {
@@ -78,6 +92,11 @@ i {
 
 .col-6 {
   width: 35%;
+}
+
+.humidity-wind {
+  position: relative;
+  top: 10px;
 }
 
 .healthy-tip {
