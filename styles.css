@@ -31,9 +31,9 @@ body {
   border-radius: 10px;
   border: 1px solid transparent;
   cursor: pointer;
-  box-shadow: 4px 4px 4px #8f7667;
+  box-shadow: 4px 4px 4px #202124;
   margin: 15px;
-  background-color: #202124;
+  background-color: #515151;
   color: whitesmoke;
 }
 
@@ -55,16 +55,24 @@ li {
 
 .city {
   line-height: 20px;
+  border: 1px solid transparent;
+  box-shadow: 4px 4px 4px #202124;
+  width: 20%;
 }
 
 .day {
-  width: ;
   line-height: 20px;
+  border: 1px solid transparent;
+  box-shadow: 4px 4px 4px #202124;
+  width: 20%;
 }
 
 .description {
   line-height: 20px;
   text-transform: capitalize;
+  border: 1px solid transparent;
+  box-shadow: 4px 4px 4px #202124;
+  width: 20%;
 }
 
 img {
@@ -117,11 +125,24 @@ a {
 .healthy-tip {
   text-decoration: none;
   color: #202124;
+  border: 1px solid transparent;
+  box-shadow: 4px 4px 4px #202124;
+  border-radius: 10px;
+
+  /* width: 20%; */
 }
 
 .trivial {
   text-decoration: none;
   color: #202124;
+  border: 1px solid transparent;
+  box-shadow: 4px 4px 4px #202124;
+  border-radius: 10px;
+}
+
+.weather-tips {
+  display: flex;
+  justify-content: space-between;
 }
 
 .source-div {
