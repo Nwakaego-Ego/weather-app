@@ -66,3 +66,23 @@ function searchForm(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchForm);
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheiTemperature = (14 * 9) / 5 + 32;
+  let elementTemperature = document.querySelector("#temperature");
+  elementTemperature.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let elementTemperature = document.querySelector("#temperature");
+  let celsiusTemperature = (elementTemperature.innerHTML * 9) / 5 + 32;
+  elementTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheitElement = document.querySelector("#fahrenheit");
+fahrenheitElement.addEventListener("click", displayFahrenheit);
+
+let celsiousElement = document.querySelector("#celsius");
+celsiousElement.addEventListener("click", displayCelsius);
