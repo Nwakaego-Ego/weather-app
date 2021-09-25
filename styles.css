@@ -19,7 +19,8 @@ body {
 .search {
   width: 60%;
   padding: 20px;
-  height: 20px;
+  height: 10px;
+  /* border-radius: 24px; */
   border-radius: 6px;
   border: 1px solid transparent;
   margin-top: 20px;
@@ -35,6 +36,7 @@ body {
   margin: 15px;
   background-color: #515151;
   color: whitesmoke;
+  font-weight: 600;
 }
 
 input {
@@ -132,12 +134,19 @@ a {
   /* width: 20%; */
 }
 
+.healthy-tip:hover {
+  color: var(--bs-body-color);
+}
+
 .trivial {
   text-decoration: none;
   color: #202124;
   border: 1px solid transparent;
   box-shadow: 4px 4px 4px #202124;
   border-radius: 10px;
+}
+.trivial:hover {
+  color: var(--bs-body-color);
 }
 
 .weather-tips {
@@ -148,7 +157,8 @@ a {
 .source-div {
   display: block;
   margin: 0 auto;
-  color: black;
+  color: #515151;
+  font-weight: 900;
   /* width: 50%; */
   margin-left: 270px;
   background-color: #202124;
