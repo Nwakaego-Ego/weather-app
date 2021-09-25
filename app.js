@@ -45,7 +45,10 @@ function displayTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  celsiusElement = Math.round(response.data.main.temp);
 }
+
 function search(city) {
   let apiKey = "49d8a1330406cb9ac92bd472b6ff3770";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -53,8 +56,6 @@ function search(city) {
 
   axios.get(apiUrl).then(displayTemperature);
 }
-
-search("london");
 
 function searchForm(event) {
   event.preventDefault();
@@ -69,20 +70,32 @@ form.addEventListener("submit", searchForm);
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  let fahrenheiTemperature = (14 * 9) / 5 + 32;
-  let elementTemperature = document.querySelector("#temperature");
-  elementTemperature.innerHTML = Math.round(fahrenheiTemperature);
-}
 
-function displayCelsius(event) {
-  event.preventDefault();
-  let elementTemperature = document.querySelector("#temperature");
-  let celsiusTemperature = (elementTemperature.innerHTML * 9) / 5 + 32;
-  elementTemperature.innerHTML = Math.round(celsiusTemperature);
+  let fahrenheiTemperatureElement = document.querySelector("#temperature");
+
+  displayCelsiusElement.classList.remove("active");
+  fahrenheitElement.classList.add("active");
+
+  let fahrenheiTemperature = (celsiusElement * 9) / 5 + 32;
+  fahrenheiTemperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 
 let fahrenheitElement = document.querySelector("#fahrenheit");
 fahrenheitElement.addEventListener("click", displayFahrenheit);
 
-let celsiousElement = document.querySelector("#celsius");
-celsiousElement.addEventListener("click", displayCelsius);
+let celsiusElement = null;
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let celsiusTemperature = document.querySelector("#temperature");
+
+  fahrenheitElement.classList.remove("active");
+  displayCelsiusElement.classList.add("active");
+
+  celsiusTemperature.innerHTML = Math.round(celsiusElement);
+}
+
+let displayCelsiusElement = document.querySelector("#celsius");
+displayCelsiusElement.addEventListener("click", displayCelsius);
+
+search("Nigeria");

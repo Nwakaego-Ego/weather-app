@@ -99,6 +99,21 @@ img {
   top: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+  cursor: default;
+  /* text-decoration: none; */
+}
+.active:hover {
+  color: black;
+  cursor: url(CURSOR_URL), auto;
+  /* text-decoration: underline; */
+}
+
 .healthy-tip {
   text-decoration: none;
   color: #202124;
