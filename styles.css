@@ -123,3 +123,24 @@ a {
   text-decoration: none;
   color: #202124;
 }
+
+.source-div {
+  display: block;
+  margin: 0 auto;
+  color: black;
+  /* width: 50%; */
+  margin-left: 270px;
+  background-color: #202124;
+}
+
+.source-link {
+  color: #817459;
+  font-weight: 800;
+}
+
+.source-link:hover {
+  color: black;
+  /* font-size: larger;
+  font-weight: 600;
+  text-decoration: underline; */
+}
